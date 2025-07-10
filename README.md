@@ -1,8 +1,12 @@
-# CloudOps Insight (Ongoing Project)
-
+# CloudOps Insight 🚀
 
 > **A cloud-native monitoring and DevOps automation platform with natural language interface**
 
+[![Build Status](https://github.com/YOUR_USERNAME/cloudops-insight/workflows/CI/badge.svg)](https://github.com/YOUR_USERNAME/cloudops-insight/actions)
+[![License: Academic Research](https://img.shields.io/badge/License-Academic%20Research-blue.svg)](#license)
+[![Python](https://img.shields.io/badge/python-3.11+-blue.svg)](https://www.python.org/downloads/)
+[![React](https://img.shields.io/badge/react-18.0+-61dafb.svg)](https://reactjs.org/)
+[![Academic Project](https://img.shields.io/badge/Type-Academic%20Research-green.svg)](#academic-context)
 
 ## 📋 Table of Contents
 
@@ -381,8 +385,28 @@ We welcome contributions from the academic and developer communities!
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is currently under academic research and development. All rights are reserved during the research phase. 
 
+**Academic Use**: This work may be cited and referenced in academic publications with proper attribution.
+
+**Commercial Use**: Please contact the author for licensing discussions.
+
+**Future Licensing**: An appropriate open source license will be selected upon completion of the research phase, likely after publication and graduation.
+
+For licensing inquiries, please contact: [your-email@university.edu]
+
+## 🙏 Acknowledgments
+
+- **Advisor**: Bramha - Graduate Research Supervision (Capstone Project)
+- **Institution**: University Of Cincinnati - Academic Support
+- **Community**: Open source contributors and the DevOps community
+- **Inspiration**: Modern cloud-native platforms and NLP research
+
+## 📞 Contact & Support
+
+- **Academic Inquiries**: mysorena@mail.uc.edu
+
+---
 
 **⭐ Star this repository if you find it useful for your research or development!**
 
