@@ -1,4 +1,5 @@
-# CloudOps Insight 🚀
+# CloudOps Insight (Ongoing Project)
+
 
 > **A cloud-native monitoring and DevOps automation platform with natural language interface**
 
