@@ -2,11 +2,6 @@
 
 > **A cloud-native monitoring and DevOps automation platform with natural language interface**
 
-[![Build Status](https://github.com/YOUR_USERNAME/cloudops-insight/workflows/CI/badge.svg)](https://github.com/YOUR_USERNAME/cloudops-insight/actions)
-[![License: Academic Research](https://img.shields.io/badge/License-Academic%20Research-blue.svg)](#license)
-[![Python](https://img.shields.io/badge/python-3.11+-blue.svg)](https://www.python.org/downloads/)
-[![React](https://img.shields.io/badge/react-18.0+-61dafb.svg)](https://reactjs.org/)
-[![Academic Project](https://img.shields.io/badge/Type-Academic%20Research-green.svg)](#academic-context)
 
 ## 📋 Table of Contents
 
