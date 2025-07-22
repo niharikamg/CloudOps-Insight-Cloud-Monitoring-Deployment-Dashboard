@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#667eea" />
+  
+  <!-- Academic Project Meta Tags -->
+  <meta name="description" content="CloudOps Insight - Natural Language Interface for Cloud Operations. Academic Research Project by Niharika at University of Cincinnati." />
+  <meta name="keywords" content="CloudOps, DevOps, Natural Language Processing, Cloud Computing, University of Cincinnati, Academic Research" />
+  <meta name="author" content="Niharika (mysorena@mail.uc.edu)" />
+  <meta name="robots" content="index, follow" />
+  
+  <!-- Academic Institution -->
+  <meta name="institution" content="University of Cincinnati" />
+  <meta name="advisor" content="Bramha" />
+  <meta name="project-type" content="Capstone Project" />
+  <meta name="academic-email" content="mysorena@mail.uc.edu" />
+  
+  <!-- Open Graph Meta Tags for Social Sharing -->
+  <meta property="og:title" content="CloudOps Insight - UC Capstone Project" />
+  <meta property="og:description" content="Natural Language Interface for Cloud Operations - Academic Research by Niharika" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://github.com/niharikamg/CloudOps-Insight-Cloud-Monitoring-Deployment-Dashboard" />
+  <meta property="og:image" content="%PUBLIC_URL%/academic-preview.png" />
+  <meta property="og:site_name" content="CloudOps Insight" />
+  
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="CloudOps Insight - UC Academic Project" />
+  <meta name="twitter:description" content="Natural Language Interface for Cloud Operations Research" />
+  <meta name="twitter:image" content="%PUBLIC_URL%/academic-preview.png" />
+  
+  <!-- Apple Touch Icon -->
+  <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+  
+  <!-- Web App Manifest -->
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+  
+  <!-- Academic Fonts - Professional Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Title -->
+  <title>CloudOps Insight - UC Capstone Project</title>
+  
+  <!-- Academic Project CSS Variables -->
+  <style>
+    :root {
+      --uc-red: #e00122;
+      --uc-black: #000000;
+      --academic-blue: #667eea;
+      --academic-purple: #764ba2;
+    }
+    
+    /* Loading screen for better UX */
+    .academic-loading {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, var(--academic-blue), var(--academic-purple));
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-family: -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
+      z-index: 9999;
+      transition: opacity 0.5s ease-out;
+    }
+    
+    .academic-loading.hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
+    
+    .loading-content h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    
+    .loading-content p {
+      font-size: 1.1rem;
+      opacity: 0.9;
+      text-align: center;
+      margin: 0.5rem 0;
+    }
+    
+    .loading-spinner {
+      width: 50px;
+      height: 50px;
+      border: 4px solid rgba(255, 255, 255, 0.3);
+      border-top: 4px solid white;
+      border-radius: 50%;
+      animation: academic-spin 1s linear infinite;
+      margin: 2rem 0;
+    }
+    
+    @keyframes academic-spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    
+    .academic-info {
+      font-size: 0.9rem;
+      opacity: 0.8;
+      text-align: center;
+      margin-top: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <!-- No Script Message -->
+  <noscript>
+    <div style="padding: 2rem; text-align: center; font-family: sans-serif;">
+      <h1>CloudOps Insight</h1>
+      <p>You need to enable JavaScript to run this academic research application.</p>
+      <p><strong>University of Cincinnati Capstone Project</strong></p>
+      <p>Author: Niharika (mysorena@mail.uc.edu)</p>
+      <p>Advisor: Bramha</p>
+    </div>
+  </noscript>
+  
+  <!-- Loading Screen -->
+  <div id="academic-loading" class="academic-loading">
+    <div class="loading-content">
+      <h1>CloudOps Insight 🚀</h1>
+      <div class="loading-spinner"></div>
+      <p>Natural Language Interface for Cloud Operations</p>
+      <div class="academic-info">
+        <p><strong>University of Cincinnati</strong></p>
+        <p>Capstone Project by Niharika</p>
+        <p>Advisor: Bramha</p>
+        <p>Research Focus: NLP for Infrastructure Management</p>
+      </div>
+    </div>
+  </div>
+  
+  <!-- React Root Element -->
+  <div id="root"></div>
+  
+  <!-- Academic Project Analytics (Development Only) -->
+  <script>
+    // Log academic project info to console
+    console.log('%c🎓 CloudOps Insight - Academic Research Project', 'color: #667eea; font-size: 16px; font-weight: bold;');
+    console.log('%cUniversity of Cincinnati', 'color: #e00122; font-weight: bold;');
+    console.log('%cAuthor: Niharika (mysorena@mail.uc.edu)', 'color: #333;');
+    console.log('%cAdvisor: Bramha', 'color: #333;');
+    console.log('%cResearch: Natural Language Interfaces for Infrastructure Management', 'color: #333;');
+    console.log('%cGitHub: https://github.com/niharikamg/CloudOps-Insight-Cloud-Monitoring-Deployment-Dashboard', 'color: #667eea;');
+    
+    // Hide loading screen once React loads
+    window.addEventListener('load', function() {
+      setTimeout(function() {
+        const loadingEl = document.getElementById('academic-loading');
+        if (loadingEl) {
+          loadingEl.classList.add('hidden');
+          setTimeout(() => {
+            loadingEl.remove();
+          }, 500);
+        }
+      }, 1000); // Show loading for at least 1 second for academic branding
+    });
+    
+    // Academic performance tracking
+    if (typeof window !== 'undefined') {
+      window.academicProject = {
+        name: 'CloudOps Insight',
+        author: 'Niharika',
+        email: 'mysorena@mail.uc.edu',
+        institution: 'University of Cincinnati',
+        advisor: 'Bramha',
+        startTime: Date.now(),
+        version: '0.1.0-alpha'
+      };
+    }
+  </script>
+  
+  <!-- Academic Project Attribution Comment -->
+  <!--
+    CloudOps Insight - Natural Language Interface for Cloud Operations
+    
+    🎓 Academic Research Project
+    📍 University of Cincinnati
+    👩‍🎓 Author: Niharika (mysorena@mail.uc.edu)
+    👨‍🏫 Advisor: Bramha
+    🔬 Research Focus: Natural Language Interfaces for Infrastructure Management
+    📅 Development Phase: Active Development & Research
+    
+    🚀 Technology Stack:
+    - Frontend: React 18+, Modern JavaScript
+    - Backend: FastAPI, Python 3.11+
+    - NLP: Claude API, Transformers
+    - Cloud: AWS, Kubernetes
+    - Monitoring: Prometheus, Grafana
+    
+    📊 Research Questions:
+    1. How effectively can natural language be mapped to infrastructure operations?
+    2. Do NL interfaces improve DevOps accessibility for non-experts?
+    3. What are the security considerations for AI-powered infrastructure management?
+    4. How do NL interfaces compare to traditional CLIs in efficiency and error rates?
+    
+    🎯 Academic Contributions:
+    - Novel architecture for NLP + cloud automation
+    - Comprehensive evaluation framework
+    - Open source implementation for future research
+    - Security framework for AI-powered infrastructure tools
+    
+    📚 Built for academic rigor, production readiness, and real-world impact
+  -->
+</body>
+</html>
