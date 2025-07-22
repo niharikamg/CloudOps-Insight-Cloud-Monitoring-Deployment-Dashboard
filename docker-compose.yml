@@ -1,0 +1,101 @@
+version: '3.8'
+
+services:
+  backend:
+    build: ./backend
+    container_name: cloudops-backend
+    ports:
+      - "8000:8000"
+    environment:
+      - DATABASE_URL=postgresql://postgres:password@db:5432/cloudops
+      - REDIS_URL=redis://redis:6379
+      - DEBUG=true
+      - UC_EMAIL=mysorena@mail.uc.edu
+      - ADVISOR_EMAIL=bramha@uc.edu
+    volumes:
+      - ./backend:/app
+      - /var/run/docker.sock:/var/run/docker.sock
+    depends_on:
+      - db
+      - redis
+    networks:
+      - cloudops-network
+
+  frontend:
+    build: ./frontend
+    container_name: cloudops-frontend
+    ports:
+      - "3000:3000"
+    environment:
+      - REACT_APP_API_URL=http://localhost:8000
+      - REACT_APP_WS_URL=ws://localhost:8000
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    depends_on:
+      - backend
+    networks:
+      - cloudops-network
+
+  db:
+    image: postgres:15
+    container_name: cloudops-db
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_DB=cloudops
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=password
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - cloudops-network
+
+  redis:
+    image: redis:7-alpine
+    container_name: cloudops-redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    networks:
+      - cloudops-network
+
+  prometheus:
+    image: prom/prometheus:latest
+    container_name: cloudops-prometheus
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./monitoring/prometheus:/etc/prometheus
+      - prometheus_data:/prometheus
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yml'
+      - '--storage.tsdb.path=/prometheus'
+    networks:
+      - cloudops-network
+
+  grafana:
+    image: grafana/grafana:latest
+    container_name: cloudops-grafana
+    ports:
+      - "3001:3000"
+    environment:
+      - GF_SECURITY_ADMIN_PASSWORD=admin123
+    volumes:
+      - grafana_data:/var/lib/grafana
+      - ./monitoring/grafana:/etc/grafana/provisioning
+    depends_on:
+      - prometheus
+    networks:
+      - cloudops-network
+
+volumes:
+  postgres_data:
+  redis_data:
+  prometheus_data:
+  grafana_data:
+
+networks:
+  cloudops-network:
+    driver: bridge
